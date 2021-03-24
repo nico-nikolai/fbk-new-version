@@ -30,7 +30,7 @@ class App extends Component {
             ? a.price < b.price
               ? 1
               : -1
-            : a._id < b._id
+            : a._id > b._id
             ? 1
             : -1
         ),
