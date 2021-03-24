@@ -4,13 +4,14 @@ import formatCurrency from "../util";
 export default class Cart extends Component {
   render() {
     const { cartItems } = this.props;
+
     return (
       <div>
         {cartItems.length === 0 ? (
           <div className="cart cart-header">Cart is empty</div>
         ) : (
           <div className="cart cart-header">
-            You have {cartItems.length} in the cart{" "}
+            You have {cartItems.reduce((a, c) => a + c.count, 0)} items in the cart{" "}
           </div>
         )}
         <div className="cart">
