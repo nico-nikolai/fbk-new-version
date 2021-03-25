@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   createOrder = (order) => {
-    alert("Need to save order for" + order.name)
+    alert("Need to save order for "  + order.name)
   }
 
   removeFromCart = (product) => {
