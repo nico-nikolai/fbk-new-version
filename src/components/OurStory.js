@@ -3,8 +3,9 @@ import React, { Component } from "react";
 export default class OurStory extends Component {
   render() {
     return (
-      <div className="header">
-      <div>
+      <div className="our">
+        <h2>Our Story</h2>
+      <div className="story">
           <p>
             I am a firm believer that we should cherish our comfort zones -
             those places and spaces that make you feel warm and loved and taken

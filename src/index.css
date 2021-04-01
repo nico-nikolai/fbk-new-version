@@ -46,6 +46,7 @@ header {
 header a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 main {
@@ -292,5 +293,16 @@ td {
 }
 
 th {
+  text-align: left;
+}
+
+/* Our Story */
+
+.our {
+  text-align: center;
+}
+
+.story {
+  padding: 20px;
   text-align: left;
 }
