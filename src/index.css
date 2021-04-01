@@ -62,6 +62,11 @@ footer {
   justify-content: center;
 }
 
+.logo {
+  height: .1rem;
+  width: .1rem;
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
