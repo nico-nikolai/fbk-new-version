@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
 import { orderReducer } from "./reducers/orderReducers";
 import { productsReducer } from "./reducers/productReducers";
+import { blogReducer } from "./reducers/blogReducers";
 
 const initialState = {};
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -12,6 +13,7 @@ const store = createStore(
     products: productsReducer,
     cart: cartReducer,
     order: orderReducer,
+    blogs: blogReducer
   }),
   initialState,
   composeEnhancer(applyMiddleware(thunk))

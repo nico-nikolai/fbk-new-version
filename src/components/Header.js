@@ -28,7 +28,7 @@ export default class Header extends Component {
         </Link>
         <Link to="/blogs">
           <FontAwesomeIcon icon={faBlog} />
-          <i className="fa fa-blog fa-lg" /> Blogs
+          <i className="fa fa-blog fa-lg" /> Blog
         </Link>
         <Link to="/admin" hidden>
           Admin

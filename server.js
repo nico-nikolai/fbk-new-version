@@ -92,9 +92,9 @@ app.delete("/api/orders/:id", async (req, res) => {
 });
 
 const Blog = mongoose.model(
-  "blog",
+  "blogs",
   new mongoose.Schema({
-    id: {
+    _id: {
       type: String,
     },
     title: String,
@@ -108,6 +108,12 @@ app.get("/api/blogs", async (req, res) => {
   const blogs = await Blog.find({});
   res.send(blogs);
 });
+
+app.post("/api/blogs", async (req, res) => {
+  const newBlog = new Blog(req.body);
+  const savedBlog = await newBlog.save();
+  res.send(savedBlog);
+})
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("serve at http://localhost:5000"));

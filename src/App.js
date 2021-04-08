@@ -7,6 +7,7 @@ import Store from "./screens/Store";
 import AdminScreen from "./screens/AdminScreen";
 import Header from "./components/Header";
 import OurStory from "./components/OurStory";
+import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
               <Route exact path="/our-story" component={OurStory} />
               <Route exact path="contact-us" component={Contact} />
               <Route path="/store" component={Store} exact />
+              <Route path="/blogs" component={Blogs} exact />
               <Route path="/home" component={Home} />
             </main>
             <footer>All rights reserved.</footer>
