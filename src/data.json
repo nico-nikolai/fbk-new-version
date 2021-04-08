@@ -48,5 +48,14 @@
             "availableSizes": ["baby"],
             "price": 36
         }
-    ]
+    ],
+    "blogs": [
+        {
+            "_id": "blog1",
+            "title": "",
+            "image": "",
+            "description": "",
+            "text": ""
+        }
+    ] 
 }

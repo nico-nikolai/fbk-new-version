@@ -68,27 +68,46 @@ const Order = mongoose.model(
 );
 
 app.post("/api/orders", async (req, res) => {
-  if(!req.body.name || 
+  if (
+    !req.body.name ||
     !req.body.email ||
     !req.body.address ||
     !req.body.cartItems ||
     !req.body.total
-    ){
-      return res.send({message: "Data is required."});
-    }
-    const order = await Order(req.body).save();
-    res.send(order)
+  ) {
+    return res.send({ message: "Data is required." });
+  }
+  const order = await Order(req.body).save();
+  res.send(order);
 });
 
 app.get("/api/orders", async (req, res) => {
   const orders = await Order.find({});
   res.send(orders);
-})
+});
 
-app.delete("/api/orders/:id", async(req, res) => {
+app.delete("/api/orders/:id", async (req, res) => {
   const order = await Order.findByIdAndDelete(req.params.id);
-  res.send(order)
-})
+  res.send(order);
+});
+
+const Blog = mongoose.model(
+  "blog",
+  new mongoose.Schema({
+    id: {
+      type: String,
+    },
+    title: String,
+    image: String,
+    description: String,
+    text: String,
+  })
+);
+
+app.get("/api/blogs", async (req, res) => {
+  const blogs = await Blog.find({});
+  res.send(blogs);
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("serve at http://localhost:5000"));
