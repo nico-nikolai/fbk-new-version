@@ -8,3 +8,5 @@ export const CLEAR_ORDER = "CLEAR_ORDER";
 export const CLEAR_CART = "CLEAR_CART";
 export const FETCH_ORDERS = "FETCH_ORDERS";
 export const FETCH_BLOGS = "FECTH_BLOGS";
+export const CREATE_CONTACT = "CREATE_CONTACT";
+export const CLEAR_CONTACT = "CLEAR_CONTACT";
